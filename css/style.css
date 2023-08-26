@@ -1,0 +1,217 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Roboto", "Raleway", sans-serif;
+  color: #2e2f42;
+}
+menu,
+ul {
+  list-style-type: none;
+}
+:root {
+  --brand-color: #2e2f42;
+  --white: #fff;
+  --cornflower: #e7e9fc;
+  --iris: #4d5ae5;
+  --slate: #434455;
+  --cloud: #f4f4fd;
+  --ocean: #404bbf;
+}
+/*header styles*/
+.bg-header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--cornflower);
+}
+
+.logo-header {
+  text-decoration: inherit;
+  color: var(--brand-color);
+  font-family: "Raleway";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+}
+.logo-header:hover {
+  color: none;
+}
+.logo-web {
+  color: var(--iris);
+}
+.links {
+  text-decoration: inherit;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  color: inherit;
+}
+.link-html,
+.link-portfolio {
+  color: var(--iris);
+}
+.links:hover,
+.links:focus {
+  color: var(--iris);
+}
+.contact-list {
+  color: var(--slate);
+}
+/*main styles*/
+.title {
+  background: var(--brand-color);
+}
+.title-1-studio {
+  color: var(--white);
+  font-family: "Roboto";
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: 1.12px;
+  text-align: center;
+}
+.btn-order {
+  color: var(--white);
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  border-radius: 4px;
+  background-color: var(--iris);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.feature-list {
+  background-color: var(--white);
+}
+.feature-title {
+  color: var(--navyblue);
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+.feature-text {
+  color: var(--slate);
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+.section-2-title {
+  color: var(--brand-color);
+  font-family: "Roboto";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+}
+.section-3 {
+  background-color: var(--cloud);
+}
+.person-card {
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--white);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.person {
+  color: var(--brand-color);
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+.profession {
+  color: var(--slate);
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+/*footer styles*/
+.bg-footer {
+  background-color: var(--brand-color);
+}
+.logo-web-footer {
+  color: var(--white);
+  font-family: "Raleway";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.footer-text {
+  color: var(--cloud);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+/*portfolio styles-main*/
+.btn {
+  color: var(--iris);
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  border-radius: 4px;
+  border: 1px solid var(--cornflower);
+  background-color: var(--cloud);
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  color: var(--white);
+  background-color: var(--ocean);
+}
+.project {
+  color: var(--brand-color);
+  font-family: "Roboto";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+.project-section {
+  color: var(--slate);
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+}
+.project-card {
+  border: 1px solid var(--cornflower);
+  background: var(--white);
+}
