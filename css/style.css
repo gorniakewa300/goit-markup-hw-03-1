@@ -13,17 +13,30 @@ body {
   color: #2e2f42;
 }
 menu,
-ul {
+ul,
+p,
+h1,
+h2,
+h3,
+h4 {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-/*header styles*/
+.container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-left: 15px;
+  margin: auto;
+}
 .bg-header {
   background-color: var(--white);
   border-bottom: 1px solid var(--cornflower);
 }
 
-.logo-header {
+.logo-company {
   text-decoration: inherit;
   color: var(--brand-color);
   font-family: "Raleway";
@@ -33,12 +46,19 @@ ul {
   line-height: 1.16;
   letter-spacing: 0.54px;
   text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 76px;
 }
-.logo-header:hover {
-  color: none;
-}
-.logo-web {
+.logo-web-lightbg {
   color: var(--iris);
+}
+.header-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 72px;
 }
 .links {
   text-decoration: inherit;
@@ -61,9 +81,32 @@ ul {
 .contact-list {
   color: var(--slate);
 }
-/*main styles*/
-.title {
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  align-items: center;
+  gap: 40px;
+}
+
+.main-title-bg {
   background: var(--brand-color);
+}
+.title {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 .title-1-studio {
   color: var(--white);
@@ -74,33 +117,54 @@ ul {
   line-height: 1.07;
   letter-spacing: 1.12px;
   text-align: center;
+  max-width: 496px;
 }
+
 .btn-order {
+  display: flex;
+  align-self: center;
   color: var(--white);
   font-family: "Roboto";
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.64px;
+  letter-spacing: 0.32;
   border-radius: 4px;
   background-color: var(--iris);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  margin-top: 48px;
+  padding: 16px 32px;
   cursor: pointer;
 }
-.feature-list {
-  background-color: var(--white);
+.btn-order:hover,
+.btn-order:focus {
+  background-color: var(--cloud);
+  color: var(--iris);
 }
-.feature-title {
+.features-list {
+  background-color: var(--white);
+  padding-top: 120px;
+  gap: 24px;
+}
+.features-list,
+.feature-title p {
+  display: flex;
+  justify-content: space-around;
+}
+.features p {
+  padding-top: 8px;
+  max-width: 264px;
+  letter-spacing: 0.2px;
+}
+.feature-title h3 {
   color: var(--navyblue);
   font-family: "Roboto";
   font-size: 20px;
-  font-style: normal;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.4px;
 }
-.feature-text {
+.description {
   color: var(--slate);
   font-family: "Roboto";
   font-size: 16px;
@@ -109,7 +173,12 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.32px;
 }
-.section-2-title {
+.section-2,
+.section-3 {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.titles {
   color: var(--brand-color);
   font-family: "Roboto";
   font-size: 36px;
@@ -118,18 +187,38 @@ ul {
   line-height: 1.11;
   letter-spacing: 0.72px;
   text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 72px;
 }
+.capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  row-gap: 24px;
+}
+
 .section-3 {
   background-color: var(--cloud);
 }
-.person-card {
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  row-gap: 24px;
+}
+
+.team figure {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white);
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  margin: 0;
 }
-.person {
+
+.team figure {
   color: var(--brand-color);
   font-family: "Roboto";
   font-size: 20px;
@@ -138,29 +227,27 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.4px;
 }
-.profession {
-  color: var(--slate);
-  font-family: "Roboto";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
+.team figcaption {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
-/*footer styles*/
+.team-person {
+  padding-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 .bg-footer {
   background-color: var(--brand-color);
+  padding-left: 0;
+  padding-right: 0;
 }
-.logo-web-footer {
-  color: var(--white);
-  font-family: "Raleway";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 1.16;
-  letter-spacing: 0.54px;
-  text-transform: uppercase;
-  text-decoration: none;
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 312px;
 }
 .footer-text {
   color: var(--cloud);
@@ -170,11 +257,27 @@ ul {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.32px;
+  max-width: 264px;
+  margin-top: 17.5px;
 }
-/*portfolio styles-main*/
+
+.logo-company-footer {
+  color: var(--iris);
+  font-family: "Raleway";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: 0.54px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.logo-company-footer span {
+  color: var(--cloud);
+}
+
 .btn {
   color: var(--iris);
-  text-align: center;
   font-family: "Roboto";
   font-size: 16px;
   font-style: normal;
@@ -185,12 +288,43 @@ ul {
   border: 1px solid var(--cornflower);
   background-color: var(--cloud);
   cursor: pointer;
+  text-align: center;
+  padding: 12px 24px;
 }
 .btn:hover,
 .btn:focus {
   color: var(--white);
   background-color: var(--ocean);
 }
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 96px;
+  padding-bottom: 72px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  flex-shrink: 0;
+  margin: 0;
+  row-gap: 40px;
+  margin-bottom: 120px;
+}
+.cards figure {
+  margin: 0;
+}
+.cards figcaption {
+  padding: 32px 16px;
+  border-bottom: 1px solid var(--cornflower);
+  border-left: 1px solid var(--cornflower);
+  border-right: 1px solid var(--cornflower);
+}
+
 .project {
   color: var(--brand-color);
   font-family: "Roboto";
@@ -206,10 +340,6 @@ ul {
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 1.5;
   letter-spacing: 0.32px;
-}
-.project-card {
-  border: 1px solid var(--cornflower);
-  background: var(--white);
 }
